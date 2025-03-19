@@ -28,13 +28,14 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::get('logout', [FormController::class, 'logout'])->name('logout');
 });
 
 
 Route::middleware(['auth'])->group(function () {
     Route::resource('forms', FormController::class);
     Route::get('forms/preview/{form}', [FormController::class, 'preview'])->name('forms.preview');
-     
+
 
     Route::post('forms/{form}/answers', [FormAnswerController::class, 'store'])->name('forms.answers.store');
     Route::get('forms/{form}/answers', [FormAnswerController::class, 'show'])->name('forms.answers.show');

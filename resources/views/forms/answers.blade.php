@@ -81,43 +81,44 @@
                         foreach ($formData as $index => $field) {
                         $labels[$index] = $field['label']; // Map field ID (index) to label
                         $types[$index] = $field['field_type'];
-                        }
-                         
+
+
+
+
 
                         // Decode the answers stored in JSON format
                         $decodedAnswers = json_decode($answer->answers, true);
-                        
+                        }
+
+
                         @endphp
-                        
-        
+
                         <!-- Loop through the decoded answers and display them -->
                         @foreach($decodedAnswers as $fieldId => $values)
 
                         <div class="answer-container">
                             <strong>Field Label:</strong>
                             @if(isset($labels[$fieldId]))
+
+
                             {{ $labels[$fieldId] }} <!-- Display label based on field ID -->
+
                             @else
                             Field label not found
                             @endif
 
                             <br>
-
-
-                            @if (is_array($values) && count($values) > 1)
-                            @foreach($values as $value)
-                          
-                            <strong>Value:</strong> {{ $value }}<br>
-                            @if($field['field_type'] =='image')
-                            <img src="{{ asset('images/' . $value) }}" alt="Uploaded Image" style="max-width: 100px; max-height: 100px;">
-                            @endif
-                            @endforeach
-                            @else
                             <strong>Value:</strong> {{ $values }}<br>
-                            @if($field['field_type'] == 'image')
-                            <img src="{{ asset('images/' . $value) }}" alt="Uploaded Image" style="max-width: 100px; max-height: 100px;">
+                            @if($types[$index] ='image')
+                            <img src="{{ asset('images/' . $values) }}" style="max-width: 100px; max-height: 100px;">
                             @endif
-                            @endif
+
+
+
+
+
+
+
                         </div>
                         <hr>
 
