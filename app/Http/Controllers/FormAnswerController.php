@@ -83,4 +83,9 @@ class FormAnswerController extends Controller
         $answers = [];
     }
 
+    public function showABC()
+    {
+        return view('forms.answers');
+    }
+
 }
