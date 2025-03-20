@@ -66,4 +66,6 @@ class FormAnswerController extends Controller
 
         return view('forms.answers', compact('answers', 'form'));
     }
+
+    
 }
