@@ -67,5 +67,15 @@ class FormAnswerController extends Controller
         return view('forms.answers', compact('answers', 'form'));
     }
 
-    
+
+
+
+
+    public function destroy(Form $form)
+    {
+        FormAnswer::where('form_id', $form->id)->where('user_id', auth()->id())->delete();
+        dd("test");
+
+        return redirect()->route('forms.show', $form);
+    }
 }
