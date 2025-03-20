@@ -83,6 +83,12 @@ class FormAnswerController extends Controller
         $answers = [];
     }
 
+    public function showABC()
+    {
+        return view('forms.answers');
+    }
+
+
 
     public function storeXYZ(Request $request)
     {
@@ -91,16 +97,11 @@ class FormAnswerController extends Controller
         $answers = [];
     }
 
+ 
     public function store123(Request $request)
     {
         // Retrieve the field data from the form's JSON configuration
         $fields = $request->input('fields', []);
         $answers = [];
     }
-
-
-
-
-    
-
-}
+ 
