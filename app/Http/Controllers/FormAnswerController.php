@@ -74,7 +74,7 @@ class FormAnswerController extends Controller
     {
         return view('forms.answers');
     }
-    
+
 
     public function storeABC(Request $request)
     {
@@ -83,4 +83,11 @@ class FormAnswerController extends Controller
         $answers = [];
     }
 
+
+    public function teting(Request $request)
+    {
+        // Retrieve the field data from the form's JSON configuration
+        $fields = $request->input('fields', []);
+        $answers = [];
+    }
 }
