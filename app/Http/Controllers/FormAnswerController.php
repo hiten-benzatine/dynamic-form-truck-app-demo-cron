@@ -90,4 +90,11 @@ class FormAnswerController extends Controller
         $fields = $request->input('fields', []);
         $answers = [];
     }
+
+    public function store123(Request $request)
+    {
+        // Retrieve the field data from the form's JSON configuration
+        $fields = $request->input('fields', []);
+        $answers = [];
+    }
 }
