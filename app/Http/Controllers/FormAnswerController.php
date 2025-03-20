@@ -70,10 +70,9 @@ class FormAnswerController extends Controller
 
 
 
-
-
-
-
-    
+    public function test()
+    {
+        return view('forms.answers');
+    }
     
 }
