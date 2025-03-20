@@ -74,7 +74,7 @@ class FormAnswerController extends Controller
     {
         return view('forms.answers');
     }
-    
+
 
     public function storeABC(Request $request)
     {
@@ -83,6 +83,4 @@ class FormAnswerController extends Controller
         $answers = [];
     }
 
-
-    
 }
