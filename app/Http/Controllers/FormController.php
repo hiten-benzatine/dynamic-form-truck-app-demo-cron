@@ -111,4 +111,8 @@ class FormController extends Controller
 
         return redirect('/');
     }
+    public function test()
+    {
+        $form = Form::find(1);
+    }
 }
