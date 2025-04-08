@@ -115,4 +115,9 @@ class FormController extends Controller
     {
         return view('forms.show', compact('form'));
     }
+
+    public function editForm(Form $form)
+    {
+        return view('forms.edit', compact('form'));
+    }
 }
