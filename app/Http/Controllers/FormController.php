@@ -111,4 +111,9 @@ class FormController extends Controller
 
         return redirect('/');
     }
+
+    public function showForm(Form $form)
+    {
+        return view('forms.show', compact('form'));
+    }
 }
