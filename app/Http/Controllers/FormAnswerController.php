@@ -96,9 +96,16 @@ class FormAnswerController extends Controller
         $fields = $request->input('fields', []);
         $answers = [];
     }
-
+<<<<<<<<< Temporary merge branch 1
 
  
-   
+    public function store123(Request $request)
+    {
+        // Retrieve the field data from the form's JSON configuration
+        $fields = $request->input('fields', []);
+        $answers = [];
+    }
 
+=========
+>>>>>>>>> Temporary merge branch 2
 }
