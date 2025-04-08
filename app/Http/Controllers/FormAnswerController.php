@@ -103,9 +103,7 @@ class FormAnswerController extends Controller
         $fields = $request->input('fields', []);
         $answers = [];
     }
-<<<<<<<<< Temporary merge branch 1
+
     }
  
-=========
-}
->>>>>>>>> Temporary merge branch 2
+
