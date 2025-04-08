@@ -96,7 +96,7 @@ class FormAnswerController extends Controller
         $fields = $request->input('fields', []);
         $answers = [];
     }
-<<<<<<<<< Temporary merge branch 1
+
 
  
     public function store123(Request $request)
@@ -106,6 +106,4 @@ class FormAnswerController extends Controller
         $answers = [];
     }
 
-=========
->>>>>>>>> Temporary merge branch 2
 }
