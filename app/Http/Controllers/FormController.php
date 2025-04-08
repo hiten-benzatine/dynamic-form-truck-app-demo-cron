@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Form;
-use App\Models\FormAnswer;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -111,15 +110,5 @@ class FormController extends Controller
         $request->session()->regenerateToken();
 
         return redirect('/');
-    }
-    public function showForm(Form $form)
-    {
-        return view('forms.show', compact('form'));
-    }
-    public function showFormAnswers(Form $form)
-    {
-        $answers = FormAnswer::where('form_id', $form->id)->get();
-
-        return view('forms.answers', compact('answers', 'form'));
     }
 }
